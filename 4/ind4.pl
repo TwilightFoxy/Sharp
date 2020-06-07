@@ -15,7 +15,7 @@ velo(Person,City):-student(Person), goroda(City), student_na(Person,City),!;
 student(Person),goroda(City), not(student_na(Person,_)), not(student_na(_,City)).
 
 %Уроженец Пензы едет на велосипеде, сделанном на родине Леонида.
-penza_test(Person):-student(Person), X=penza, not(birth(Person,_)), goroda(Unknown), not(Unknown=X),velo(Person,Unknown), rodom(viktor,Unknown). %
+penza_test(Person):-student(Person), X=penza, not(birth(Person,_)), goroda(Unknown), not(Unknown=X),velo(Person,Unknown), rodom(viktor,Unknown).
 
 %Предикат выясняющий кто родом из Москвы
 rodom(Person,X):-student(Person), goroda(X), birth(Person,X),!;
